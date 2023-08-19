@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /* 
+        function adder(val1, val2){
+            return val1 + val2;
+        };
+         */
+
+        /* function adder(val1, val2){
+            var num1 = val1 || 0;
+            var num2 = val2 || 0;
+            return num1 + num2;
+        }; 
+        */
+       // default parameters
+       /*  function adder(val1 = 0, val2 = 0){
+            return val1 + val2;
+        };
+
+        console.log(adder(5,6));
+        console.log(adder(5)); */
+
+        /* function adder(){
+            // return arguments.length;
+            let total = 0;
+            for(let i = 0; i < arguments.length; i++){
+                total += arguments[i]
+            }
+            return total;
+        }; */
+
+
+        // rest parameters
+        function adder(...nums){
+            // return arguments.length;
+            let total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i]
+            }
+            return total;
+        };
+
+       /*  
+        console.log(adder(5)); 
+        console.log(adder(5,6));
+        console.log(adder(5,6,7));
+        console.log(adder(5,6,7,8));
+        console.log(adder(5,6,7,8,9)); 
+        */
+        let args = [5,6,7,8,9,10];
+        // console.log(adder(args[0], args[1], args[2], args[3], args[4], args[5]));
+        console.log(adder(...args));
+
+        var hero = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            city : "New York",
+            power : 7,
+            movie : { 
+                movie1 :  "Ironman ",
+                movie2 :  "Ironman 2",
+            }
+        };
+
+        // shallow clone
+        // var temphero = {...hero};
+        
+        // deep clone
+        var temphero = JSON.parse(JSON.stringify( hero ));
+
+        console.log(temphero.power);/// 7
+        temphero.power = 14;
+        temphero.movie.movie1 = "Ironmonger";
+        console.log(temphero.movie.movie1);/// 14
+        console.log(hero.movie.movie1);/// ???
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

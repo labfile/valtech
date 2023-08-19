@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var favNums = [13,32,64,72,10,13,8,101,37,18,11,9,12,0,9,81,25,99,7,67,23,65];
+
+         /*   
+         for(var i = 0; i < favNums.length; i++){
+            console.log(favNums[i]);
+         };
+         */
+        
+        /* 
+        favNums.forEach(function(val,idx,arr){
+            console.log(val);
+        });
+        */
+       /* var doubleFavNums = []; */
+
+      /*  for(var i = 0; i < favNums.length; i++){
+         doubleFavNums.push(favNums[i] * 2);
+       };
+
+       console.log(doubleFavNums); */
+
+      /*  favNums.forEach(function(val,idx,arr){
+        doubleFavNums.push(val * 2);
+       }); */
+
+      /*  
+      var doubleFavNums = favNums.map(function(val,idx,arr){
+         return val * 2;
+       });
+       console.log(doubleFavNums);
+      */
+    /*  
+    var lessThan50 = favNums.filter(function(val, idx, arr){
+        return val < 50;
+     });
+
+     console.log(lessThan50);
+    */
+
+   /*  
+    var lessThan100 = favNums.every(function(val, idx, arr){
+        console.log(val);
+        return val < 100;
+    });
+    console.log(lessThan100); 
+    */
+    /* 
+    var lessThan100 = favNums.some(function(val, idx, arr){
+        console.log(val);
+        return val < 100;
+    });
+    console.log(lessThan100); 
+    */
+
+    var total = favNums.reduce(function(initVal, val, idx, arr){
+        return initVal + val;
+    }, 0);
+
+    console.log(total);
+
+    /* 
+    
+    from these favNums double it and pick all the values that are less than 90
+
+    */
+
+    var doubleVals = favNums
+    .map(function(val){
+        return val * 2
+    })
+    .filter(function(val){
+        return val < 90
+    });
+
+    console.log(doubleVals);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    http://p.ip.fi/afnO
+ -->
+
+
+
+
+
+
