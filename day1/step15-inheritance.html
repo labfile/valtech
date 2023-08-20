@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            power = 5;
+            constructor(npower){
+                this.power = npower;
+            }
+        }
+         class Hero extends Person{
+            title = "default";
+            static version = 101;
+            firstname = "default";
+            lastname = "default";
+            #secret = "my secret";
+            constructor(ht,hf,hl,hp){
+                super(hp);
+                this.title = ht;
+                this.firstname = hf;
+                this.lastname = hl;
+            }
+           fullname(){
+            return this.firstname+" "+this.lastname;
+           }
+           get secret(){
+            return this.#secret;
+           }
+           set secret(nsecret){
+            this.#secret = nsecret;
+           }
+
+        }
+
+        let hero1 = new Hero("Batman","Bruce","Wayne",7);
+        console.log(hero1.secret);
+        hero1.secret = "save the world"
+        console.log(hero1.secret);
+        console.log(hero1.fullname());
+
+        let hero2 = new Hero("Superman","Clark","Kent",9);
+        console.log(hero2.secret);
+        hero2.secret = "save the world"
+        console.log(hero2.secret);
+        console.log(hero2.fullname());
+
+        console.log(hero1.fullname === hero2.fullname); 
+        console.log(hero1.power);
+        console.log(hero2.power);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

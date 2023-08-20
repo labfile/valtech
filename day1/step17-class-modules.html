@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import { Hero } from "./modules/hero.js"
+        let hero1 = new Hero("Batman","Bruce","Wayne",7);
+        console.log(hero1.secret);
+        hero1.secret = "save the world"
+        console.log(hero1.secret);
+        console.log(hero1.fullname());
+
+        let hero2 = new Hero("Superman","Clark","Kent",9);
+        console.log(hero2.secret);
+        hero2.secret = "save the world"
+        console.log(hero2.secret);
+        console.log(hero2.fullname());
+
+        console.log(hero1.fullname === hero2.fullname); 
+        console.log(hero1.power);
+        console.log(hero2.power);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

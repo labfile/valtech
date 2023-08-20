@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         // var hero = new Object();
+
+        /*  
+            var person = Object.create(null);
+            person.company = "Valtech";
+        */
+
+        var hero = Object.create(null);
+            // Object.defineProperty(hero,"power",{ value : 7, writable : true, enumerable : true, configurable : true });
+            Object.defineProperties(hero,{
+                power : { value : 7, writable : true, enumerable : true, configurable : true },
+                title : { value : "Ironman", enumerable : true},
+                firstname : { value : "Tony", enumerable : true },
+                lastname : { value : "Stark", enumerable : true },
+                city : { value : "New York", enumerable : true },
+                accessPower : { 
+                    get : function(){
+                        return this.power;
+                    },
+                    set : function(npower){
+                        this.power = npower;
+                    }}
+            });
+          
+            
+            console.log( hero.accessPower );// getter 
+            hero.accessPower = 10; // setter 
+            console.log( hero.accessPower );// getter 
+            /* console.log(hero.power);
+            hero.power = 9;
+            console.log(hero.power);
+            for(var prop in hero){
+                console.log(prop,hero[prop]);
+            }
+            Object.defineProperty(hero,"power",{ value : 10, writable : false, enumerable : false });
+            console.log(hero.power);
+            for(var prop in hero){
+                console.log(prop,hero[prop]);
+            } */
+
+           /*  console.log(hero.power);
+            console.log(hero.power); */
+
+        /*  var hero = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            city : "New York",
+            power : 7
+        }; */
+
+       /*  var tempHero = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            city : "New York",
+            power : 7
+        }; */
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

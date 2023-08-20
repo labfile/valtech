@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     async function firstpromise(){
+            return await new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(false){
+                        resolve("response from first promise")
+                    }else{
+                        reject("error from first promise");
+                    }
+                },1000);
+            })
+        };
+
+        firstpromise().then().catch().finally()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
